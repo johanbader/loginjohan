@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Acceso</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="container-login">
+        <form action="post" id="formularioAcceso">
+
+            <div class="input-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario">
+            </div>
+            
+            <div class="input-group">
+                <label for="clave">Clave</label>
+                <input type="password" name="clave" id="clave">
+            </div>
+
+            <button type="submit" onclick="procesarLogin(event)">Enviar</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Función para procesar el login
+        function procesarLogin(evento) {
+            evento.preventDefault(); 
+
+            let usuario = document.getElementById("usuario").value;
+            let clave = document.getElementById("clave").value;
+
+            if (usuario === "Johan" && clave === "Bader") {
+                console.log("Acceso concedido");
+            } else {
+                console.log("Acceso denegado");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
